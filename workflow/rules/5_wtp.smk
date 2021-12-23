@@ -16,12 +16,16 @@ rule create_wtp_input:
         expand("results/wtp/input/microbial_scaffolds_gt1500_{id}.fasta",
                 id=IDS),
     shell:
-        """
-        mkdir -p results/wtp/input
-        for f in {input};do
-            ln -sr $f -d results/wtp/input;
-        done
-        """
+         """
+         cp {input} {output}
+         """
+        
+#         """
+#         mkdir -p results/wtp/input
+#         for f in {input};do
+#             ln -sr $f -d results/wtp/input;
+#         done
+#         """
 
 rule wtp:
     input:
