@@ -19,13 +19,13 @@ VIRAL_SAMPLES = samples_df.loc[samples_df.fraction == 'viral', 'sample_id'].valu
 MICROBIAL_SAMPLES = samples_df.loc[samples_df.fraction == 'microbial', 'sample_id'].values.tolist()
 ALL_SAMPLES = VIRAL_SAMPLES + MICROBIAL_SAMPLES
 LENGTH = str(config['SEQTK']['length'])
-IDS, = glob_wildcards("results/wtp/input/microbial_scaffolds_gt{length}_{id}.fasta")
+IDS, = glob_wildcards("results/wtp/input/microbial_scaffolds_gt1500_{id}.fasta")
 
 rule all:
     input:
         # WTP input soft link output
-         expand("results/wtp/input/microbial_scaffolds_gt{length}_{id}.fasta",
-                length=LENGTH, id=IDS),
+         expand("results/wtp/input/microbial_scaffolds_gt1500_{id}.fasta",
+                id=IDS),
 #         # FASTP output
 #         expand("results/{fraction}/{sample}/qc/{sample}.fastp.html",
 #                  fraction=['viral'], sample=VIRAL_SAMPLES),
