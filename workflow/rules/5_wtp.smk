@@ -6,15 +6,15 @@ MICROBIAL_SAMPLES = samples_df.loc[samples_df.fraction == 'microbial', 'sample_i
 ALL_SAMPLES = VIRAL_SAMPLES + MICROBIAL_SAMPLES
 LENGTH = config['SEQTK']['length']
 
-IDS, = glob_wildcards("results/wtp/input/microbial_scaffolds_gt{length}_{id}.fasta")
+IDS, = glob_wildcards("results/wtp/input/microbial_scaffolds_gt1500_{id}.fasta")
 
 rule create_wtp_input:
     input:
-        expand("results/microbial/concatenated_scaffolds/microbial_scaffolds_gt{length}_{id}.fasta",
-                length=LENGTH, id=IDS),
+        expand("results/microbial/concatenated_scaffolds/microbial_scaffolds_gt1500_{id}.fasta",
+                id=IDS),
     output:
-        expand("results/wtp/input/microbial_scaffolds_gt{length}_{id}.fasta",
-                length=LENGTH, id=IDS),
+        expand("results/wtp/input/microbial_scaffolds_gt1500_{id}.fasta",
+                id=IDS),
     shell:
         """
         mkdir -p results/wtp/input
