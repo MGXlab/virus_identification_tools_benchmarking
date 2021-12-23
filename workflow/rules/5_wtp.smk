@@ -6,7 +6,7 @@ MICROBIAL_SAMPLES = samples_df.loc[samples_df.fraction == 'microbial', 'sample_i
 ALL_SAMPLES = VIRAL_SAMPLES + MICROBIAL_SAMPLES
 LENGTH = config['SEQTK']['length']
 
-IDS = "0 1 2 ...".split()
+IDS = "0 10000 20000 ...".split()
 
 rule create_wtp_input:
     input:
