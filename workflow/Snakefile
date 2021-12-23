@@ -19,6 +19,7 @@ VIRAL_SAMPLES = samples_df.loc[samples_df.fraction == 'viral', 'sample_id'].valu
 MICROBIAL_SAMPLES = samples_df.loc[samples_df.fraction == 'microbial', 'sample_id'].values.tolist()
 ALL_SAMPLES = VIRAL_SAMPLES + MICROBIAL_SAMPLES
 LENGTH = str(config['SEQTK']['length'])
+IDS = "0 10000 20000 ...".split()
 
 rule all:
     input:
