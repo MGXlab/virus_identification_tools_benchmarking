@@ -6,15 +6,17 @@ MICROBIAL_SAMPLES = samples_df.loc[samples_df.fraction == 'microbial', 'sample_i
 ALL_SAMPLES = VIRAL_SAMPLES + MICROBIAL_SAMPLES
 LENGTH = config['SEQTK']['length']
 
+IDS = "0 1 2 ...".split()
+
 rule create_wtp_input:
     input:
-        expand("results/{fraction}/{sample}/scaffolds/{sample}_scaffolds_gt{length}.fasta",
-                fraction='viral', sample=VIRAL_SAMPLES, length=LENGTH),
-        expand("results/{fraction}/{sample}/scaffolds/{sample}_scaffolds_gt{length}.fasta",
-                fraction='microbial', sample=MICROBIAL_SAMPLES, length=LENGTH)
+        expand("results/{fraction}/concatenated_scaffolds/{fraction}_scaffolds_gt{length}_{id}.fasta",
+                fraction='viral', length=LENGTH, id=IDS),
+        expand("results/{fraction}/concatenated_scaffolds/{fraction}_scaffolds_gt{length}_{id}.fasta",
+                fraction='microbial', length=LENGTH, id=IDS),
     output:
-        expand("results/wtp/input/{sample}_scaffolds_gt{length}.fasta",
-                sample=ALL_SAMPLES, length=LENGTH),
+        expand("results/wtp/input/{fraction}_scaffolds_gt{length}_{id}.fasta",
+                fraction=FRACTIONS, length=LENGTH, id=IDS),
     shell:
         """
         mkdir -p results/wtp/input
