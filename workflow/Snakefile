@@ -27,6 +27,7 @@ rule all:
                  fraction=['viral'], sample=VIRAL_SAMPLES),
         expand("results/{fraction}/{sample}/qc/{sample}.fastp.html",
                  fraction=['microbial'], sample=MICROBIAL_SAMPLES),
+        "results/multiqc/multiqc_report.html"
         # METASPADES output
         expand("results/{fraction}/{sample}/assembly/scaffolds.fasta",
                 fraction=['viral'], sample=VIRAL_SAMPLES),

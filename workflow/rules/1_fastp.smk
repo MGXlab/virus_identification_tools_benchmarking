@@ -21,3 +21,17 @@ rule fastp:
         "--html {output.html} --json {output.json} "
         "--dedup --detect_adapter_for_pe "
         "&> {log}"
+        
+ rule virus_multiqc:
+    input:
+        expand("results/{fraction}/{sample}/qc/", fraction=['viral'], sample=VIRAL_SAMPLES)
+    output:
+        directory("results/multiqc/")
+    log:
+        "logs/{fraction}/{fractiion}.multiqc.log"
+    threads:
+        2
+    conda:
+        "../envs/fastp.yaml"
+    shell:
+        "multiqc {input} -o {output}"
