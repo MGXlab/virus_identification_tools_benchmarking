@@ -46,3 +46,33 @@ rule microbial_hmmsearch:
         "../envs/hmmsearch.yaml"
     shell:
         "hmmsearch --domtblout {output.table} --cpu {threads} {params.hmms} {input}"
+        
+rule viralhmm_domtab2df:
+    input:
+        table = "results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_table.out"
+    output:
+        df = "results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_df.txt"
+    log:
+        "logs/{fraction}/hmmsearch/{fraction}.viralhmm_hmmsearch_domtab2df.log"
+    threads:
+        config['HMMSEARCH']['threads']
+    params:
+        script = "workflow/scripts/hmm_domtab2df.py"
+    shell:
+        "python3 {params.script} -in {input} -out {output} -t {threads}"
+        
+rule microbialhmm_domtab2df:
+    input:
+        table = "results/{fraction}/hmmsearch/{fraction}_microbialhhmm_hmmsearch_table.out"
+    output:
+        df = "results/{fraction}/hmmsearch/{fraction}_microbialhhmm_hmmsearch_df.txt"
+    log:
+        "logs/{fraction}/hmmsearch/{fraction}.microbialh_hmmsearch_domtab2df.log"
+    threads:
+        config['HMMSEARCH']['threads']
+    params:
+        script = "workflow/scripts/hmm_domtab2df.py"
+    shell:
+        "python3 {params.script} -in {input} -out {output} -t {threads}"
+
+    
