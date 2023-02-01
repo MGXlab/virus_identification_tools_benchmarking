@@ -32,7 +32,7 @@ with open(input_file, 'r') as fin:
                     {
                         'contig_id': hit.id,
                         'hmm': record.id ,
-                        'evalue': hit.bitscore,
+                        'bitscore': hit.bitscore,
                         'hit_start': hsp.hit_start,
                         'hit_end': hsp.hit_end,
 #                         'hit_length': (hsp.hit_end - hsp.hit_start)*3
