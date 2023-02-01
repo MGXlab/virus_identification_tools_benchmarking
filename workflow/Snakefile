@@ -70,12 +70,12 @@ rule all:
         # HMM dataframe output
         expand("results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_df.txt",
                  fraction=['viral']),
-#         expand("results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_df.txt",
-#                  fraction=['microbial']),
-#          expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_df.txt",
-#                  fraction=['viral']),
-#         expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_df.txt",
-#                  fraction=['microbial']),    
+        expand("results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_df.txt",
+                 fraction=['microbial']),
+         expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_df.txt",
+                 fraction=['viral']),
+        expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_df.txt",
+                 fraction=['microbial']),    
 #         # CAT output
 #         expand("results/{fraction}/cat/{fraction}_scaffolds_gt" + LENGTH + ".contig2classification.txt", fraction=FRACTIONS, length=LENGTH),
 #         expand("results/{fraction}/cat/{fraction}_scaffolds_gt" + LENGTH + "_cat_taxonomy_official.txt", fraction=FRACTIONS, length=LENGTH),
