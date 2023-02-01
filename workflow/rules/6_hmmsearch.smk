@@ -63,11 +63,11 @@ rule viralhmm_domtab2df:
         
 rule microbialhmm_domtab2df:
     input:
-        table = "results/{fraction}/hmmsearch/{fraction}_microbialhhmm_hmmsearch_table.out"
+        table = "results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_table.out"
     output:
-        df = "results/{fraction}/hmmsearch/{fraction}_microbialhhmm_hmmsearch_df.txt"
+        df = "results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_df.txt"
     log:
-        "logs/{fraction}/hmmsearch/{fraction}.microbialh_hmmsearch_domtab2df.log"
+        "logs/{fraction}/hmmsearch/{fraction}.microbial_hmmsearch_domtab2df.log"
     threads:
         config['HMMSEARCH']['threads']
     params:
