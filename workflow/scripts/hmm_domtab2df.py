@@ -39,6 +39,5 @@ with open(input_file, 'r') as fin:
                     })
 
 f = pd.DataFrame(d)
-f['contig_id'] = f['contig_id'].map(lambda x: str(x)[:-2])
 
 f.to_csv(output_file, sep='\t',index=False)
