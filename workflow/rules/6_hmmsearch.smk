@@ -51,7 +51,7 @@ rule viralhmm_domtab2df:
     input:
         table = "results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_table.out"
     output:
-        df = "results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_merged_hit_length.txt"
+        df = "results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_merged_hit_length.pkl"
     log:
         "logs/{fraction}/hmmsearch/{fraction}.viralhmm_hmmsearch_domtab2df.log"
     threads:
@@ -65,7 +65,7 @@ rule microbialhmm_domtab2df:
     input:
         table = "results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_table.out"
     output:
-        df = "results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_merged_hit_length.txt"
+        df = "results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_merged_hit_length.pkl"
     log:
         "logs/{fraction}/hmmsearch/{fraction}.microbial_hmmsearch_domtab2df.log"
     threads:
