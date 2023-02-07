@@ -68,13 +68,13 @@ rule all:
 #         expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_table.out",
 #                  fraction=['microbial']),
         # HMM dataframe output
-        expand("results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_df.txt",
+        expand("results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_merged_hit_length.txt",
                  fraction=['viral']),
-        expand("results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_df.txt",
+        expand("results/{fraction}/hmmsearch/{fraction}_viralhmm_hmmsearch_merged_hit_length.txt",
                  fraction=['microbial']),
-         expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_df.txt",
+         expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_merged_hit_length.txt",
                  fraction=['viral']),
-        expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_df.txt",
+        expand("results/{fraction}/hmmsearch/{fraction}_microbialhmm_hmmsearch_merged_hit_length.txt",
                  fraction=['microbial']),    
 #         # CAT output
 #         expand("results/{fraction}/cat/{fraction}_scaffolds_gt" + LENGTH + ".contig2classification.txt", fraction=FRACTIONS, length=LENGTH),
