@@ -93,6 +93,9 @@ for index in contig_hmm_dict:
     # times 3 for converting the amino acid seq lengths to nucleotide seq lengths
     merge_dict[contig] = mergeinterval*3
     
-hmm_merge_hit_length_df = pd.DataFrame.from_dict(merge_dict, orient = 'index', columns = ['merged_hit_length'])
-hmm_merge_hit_length_df.to_csv(output_file, sep='\t')
+# hmm_merge_hit_length_df = pd.DataFrame.from_dict(merge_dict, orient = 'index', columns = ['merged_hit_length'])
+# hmm_merge_hit_length_df.to_csv(output_file, sep='\t')
+
+with open(output_file, 'wb') as f:
+    pickle.dump(merge_dict, f)
 
