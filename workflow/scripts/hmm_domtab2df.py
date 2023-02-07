@@ -4,6 +4,7 @@ import pandas as pd
 from Bio import SearchIO
 import argparse
 import multiprocessing
+import pickle
 
 # Create an argument parser object
 parser = argparse.ArgumentParser(description='Example script')
