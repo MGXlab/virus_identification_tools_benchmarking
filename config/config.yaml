@@ -31,13 +31,13 @@ WTP:
     identify: true
     annotate: false
     dv: false
-    ma: false
+    ma: true
     mp: false
     pp: false
     sm: false
     vb: false
     vf: false
-    vn: false
+    vn: true
     vs: false
     ph: false
     vs2: false
