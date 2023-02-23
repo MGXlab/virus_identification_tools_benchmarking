@@ -25,11 +25,13 @@ rule create_wtp_input:
 
 rule wtp:
     input:
-        expand("results/wtp/input/{sample}_scaffolds_gt{length}.fasta",
-                sample=ALL_SAMPLES, length=LENGTH)
+        "results/wtp/input/2-643074_scaffolds_gt1500.fasta",
+#         expand("results/wtp/input/{sample}_scaffolds_gt{length}.fasta",
+#                 sample=ALL_SAMPLES, length=LENGTH)
     output:
-        expand("results/wtp/output/{sample}_scaffolds_gt{length}/raw_data/pprmeta_results_{sample}_scaffolds_gt{length}.tar.gz",
-                sample=ALL_SAMPLES, length=LENGTH),
+        "results/wtp/output/2-643074_scaffolds_gt1500.fasta/raw_data/pprmeta_results_2-643074_scaffolds_gt1500.tar.gz",
+#         expand("results/wtp/output/{sample}_scaffolds_gt{length}/raw_data/pprmeta_results_{sample}_scaffolds_gt{length}.tar.gz",
+#                 sample=ALL_SAMPLES, length=LENGTH),
         # expand("results/wtp/output/{sample}_scaffolds_gt{length}/{sample}_scaffolds_gt{length}_quality_summary.tsv",
         #         sample=ALL_SAMPLES, length=LENGTH),
         # "results/wtp/output/runinfo/execution_report.html",
