@@ -51,7 +51,7 @@ rule all:
 #         "results/minimap/microbial_target.csv",
 #         "results/minimap/minimap_out.csv",
         # WTP output
-        "results/wtp/output/2-643074_scaffolds_gt1500.fasta/raw_data/pprmeta_results_2-643074_scaffolds_gt1500.tar.gz"
+        "results/wtp/output/2-643074_scaffolds_gt1500.fasta/raw_data/vibrant_results_2-643074_scaffolds_gt1500.tar.gz"
 #         expand("results/wtp/output/{sample}_scaffolds_gt{length}/{sample}_scaffolds_gt{length}_quality_summary.tsv",
 #                 sample=ALL_SAMPLES, length=LENGTH),
 #         # TRANSEQ output
