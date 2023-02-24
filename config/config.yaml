@@ -32,16 +32,16 @@ WTP:
     annotate: false
     dv: false
     ma: true
-    mp: false
-    pp: false
-    sm: false
+    mp: true
+    pp: true
+    sm: true
     vb: false
-    vf: false
+    vf: true
     vn: true
-    vs: false
-    ph: false
-    vs2: false
-    sk: false
+    vs: true
+    ph: true
+    vs2: true
+    sk: true
 
 
 ############
