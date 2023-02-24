@@ -29,7 +29,7 @@ rule wtp:
 #         expand("results/wtp/input/{sample}_scaffolds_gt{length}.fasta",
 #                 sample=ALL_SAMPLES, length=LENGTH)
     output:
-        "results/wtp/output/2-643074_scaffolds_gt1500.fasta/raw_data/pprmeta_results_2-643074_scaffolds_gt1500.tar.gz",
+        "results/wtp/output/2-643074_scaffolds_gt1500.fasta/raw_data/vibrant_results_2-643074_scaffolds_gt1500.tar.gz",
 #         expand("results/wtp/output/{sample}_scaffolds_gt{length}/raw_data/pprmeta_results_{sample}_scaffolds_gt{length}.tar.gz",
 #                 sample=ALL_SAMPLES, length=LENGTH),
         # expand("results/wtp/output/{sample}_scaffolds_gt{length}/{sample}_scaffolds_gt{length}_quality_summary.tsv",
