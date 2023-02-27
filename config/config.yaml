@@ -30,7 +30,7 @@ WTP:
     threads: 92
     identify: true
     annotate: false
-    dv: false
+    dv: true
     ma: true
     mp: true
     pp: true
