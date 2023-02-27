@@ -27,7 +27,7 @@ WTP:
     databases: /net/phage/linuxhome/mgx/people/lingyi/wtp_databases
     cachedir: /home/lingyi/singularity_images
     outputdir: results/wtp/output
-    threads: 92
+    threads: 70
     identify: true
     annotate: false
     dv: true
