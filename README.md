@@ -1,3 +1,5 @@
+[![DOI](https://sandbox.zenodo.org/badge/395661559.svg)](https://sandbox.zenodo.org/doi/10.5072/zenodo.42002) 
+
 # virus_identification_tools_benchmarking
 
 ## Quickstart
